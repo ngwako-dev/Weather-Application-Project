@@ -1,7 +1,6 @@
 package com.e.weatherservice.model.db.unitlocalized
 
 interface UnitSpecificCurrentWeatherEntry {
-    val temperature: Double
     val windSpeed: Double
     val windDirection: String
     val precipitationVolume: Double
