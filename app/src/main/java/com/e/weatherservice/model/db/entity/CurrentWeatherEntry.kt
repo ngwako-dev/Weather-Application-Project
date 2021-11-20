@@ -1,32 +1,35 @@
-package com.e.weatherservice.model.response
+package com.e.weatherservice.model.db.entity
 
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
-data class Current(
+const val CURRENT_WEATHER_ID = 0
+
+@Entity(tableName = "current_weather")
+data class CurrentWeatherEntry(
     @SerializedName("observation_time")
     val observationTime: String,
-    val temperature: Int,
+    val temperature: Double,
     @SerializedName("weather_code")
-    val weatherCode: Int,
+    val weatherCode: Double,
     @SerializedName("weather_icons")
     val weatherIcons: List<String>,
     @SerializedName("weather_descriptions")
     val weatherDescriptions: List<String>,
     @SerializedName("wind_speed")
-    val windSpeed: Int,
-    @SerializedName("wind_degree")
-    val windDegree: Int,
+    val windSpeed: Double,
     @SerializedName("wind_dir")
     val windDir: String,
-    val pressure: Int,
-    val precip: Int,
-    val humidity: Int,
-    val cloudcover: Int,
-    val feelslike: Int,
+    val precip: Double,
+    val feelslike: Double,
     @SerializedName("uv_index")
-    val uvIndex: Int,
-    val visibility: Int,
+    val uvIndex: Double,
+    val visibility: Double,
     @SerializedName("is_day")
     val isDay: String
-)
+){
+    @PrimaryKey(autoGenerate = false)
+    var id: Int = CURRENT_WEATHER_ID
+}
