@@ -9,7 +9,7 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "com.example.mertkesgin.weatherapp"
+        applicationId "com.e.weatherservice"
         minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
@@ -85,6 +85,11 @@ dependencies {
     // Dagger Core
     implementation "com.google.dagger:dagger:2.28"
     kapt "com.google.dagger:dagger-compiler:2.28"
+
+    //implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-experimental-adapter:1.0.0'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.0'
+    implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
 
     // Dagger Android
     api 'com.google.dagger:dagger-android:2.23.2'
