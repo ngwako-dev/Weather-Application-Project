@@ -1,7 +1,6 @@
 package com.e.weatherservice
 
 import android.app.Application
-import androidx.preference.PreferenceManager
 import com.e.weatherservice.model.db.ForecastDatabase
 import com.e.weatherservice.model.network.*
 import com.e.weatherservice.model.repository.ForecastRepository
@@ -10,7 +9,6 @@ import com.e.weatherservice.ui.weather.current.CurrentWeatherViewModelFactory
 import com.jakewharton.threetenabp.AndroidThreeTen
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
-import org.kodein.di.Provider
 import org.kodein.di.android.x.androidXModule
 import org.kodein.di.generic.bind
 import org.kodein.di.generic.instance

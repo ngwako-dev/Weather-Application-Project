@@ -1,7 +1,6 @@
 package com.e.weatherservice.ui.weather.current
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,8 +10,6 @@ import com.e.weatherservice.R
 import com.e.weatherservice.base.ScopedFragment
 import com.e.weatherservice.model.network.*
 import kotlinx.android.synthetic.main.current_weather_fragment.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
