@@ -1,5 +1,6 @@
-package com.e.weatherservice.model
+package com.e.weatherservice.model.network
 
+import com.e.weatherservice.model.network.ConnectivityInterceptor
 import com.e.weatherservice.model.network.response.CurrentWeatherResponse
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import kotlinx.coroutines.Deferred
@@ -23,7 +24,9 @@ interface WeatherAPiService {
     ): Deferred<CurrentWeatherResponse>
 
     companion object {
-        operator fun invoke(): WeatherAPiService {
+        operator fun invoke(
+            connectivityInterceptor: ConnectivityInterceptor
+        ): WeatherAPiService {
             val requestInterceptor = Interceptor { chain ->
 
                 val url = chain.request()
@@ -39,6 +42,7 @@ interface WeatherAPiService {
             }
             val okHttpClient = OkHttpClient.Builder()
                 .addInterceptor(requestInterceptor)
+                .addInterceptor(connectivityInterceptor)
                 .build()
 
             return Retrofit.Builder()
