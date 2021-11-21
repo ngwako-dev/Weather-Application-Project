@@ -14,7 +14,6 @@ import com.e.weatherservice.R
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
-@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var toolbar: Toolbar
