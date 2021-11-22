@@ -13,4 +13,4 @@ import androidx.room.ColumnInfo
     @ColumnInfo(name = "feelslike")
     override val feelsLikeTemperature: Double
 
-):UnitSpecificCurrentWeatherEntry
+ ):UnitSpecificCurrentWeatherEntry
