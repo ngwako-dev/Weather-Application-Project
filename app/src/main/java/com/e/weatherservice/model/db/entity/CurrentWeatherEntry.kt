@@ -1,6 +1,7 @@
 package com.e.weatherservice.model.db.entity
 
 
+import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
